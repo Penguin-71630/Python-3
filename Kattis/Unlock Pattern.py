@@ -1,7 +1,3 @@
-import logging as l
-
-l.basicConfig(filename='unlock pattern', level=l.INFO)
-
 pattern = []
 for i in range(3):
     line = [int(j) for j in input().split()]
@@ -25,10 +21,7 @@ last_index = find_index(1)
 distance = 0
 
 for i in range(2, 10):
-    l.info('i:{}'.format(i))
     distance += find_distance(find_index(i))
     last_index = find_index(i)
-    l.info('distance:{}'.format(distance))
-    l.info('last_index:{}'.format(last_index))
 
 print(distance)
